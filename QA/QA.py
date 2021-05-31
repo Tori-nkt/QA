@@ -14,5 +14,9 @@ time.sleep(3)
 txt = browser.find_element_by_css_selector('h1').text
 assert txt.find("Lost") != -1  # ф-ция find() находит подстроку в строке, если нет - возвращает '-1' 
 
+browser.find_element_by_link_text('Остаться в живых').click()
+time.sleep(3)
 
-
+txt = browser.find_element_by_class_name('b-post__title').text
+assert txt.find("Остаться в живых") != -1
+time.sleep(3)
